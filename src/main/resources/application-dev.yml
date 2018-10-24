@@ -1,0 +1,38 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://172.20.10.2:3306/sell?useSSL=false
+  jpa:
+    show-sql: true
+  jackson:
+    default-property-inclusion: non_null
+  redis:
+    host: 172.20.10.2
+    port: 6379
+server:
+  servlet:
+    context-path: /sell
+  error:
+    path: /error
+wechat:
+  mp-appId: wx777bb90ff00ef5c1
+  mp-app-secret: 0549534805bc862aa19a6dd84e5739b2
+  mch-id: 1409146202
+  mch-key: c976503d34ca432c601361f969fd8d85
+  key-path: /var/weixin_cert/h5.p12
+  notify-url: http://xinpengsell.natapp1.cc/sell/pay/notify
+
+project-url:
+  wechat-mp-authorize: http://xinpengsell.natapp1.cc
+  wechat-open-authorize: http://xinpengsell.natapp1.cc
+  sell: http://xinpengsell.natapp1.cc
+
+#logging:
+##  pattern:
+##    console: "%d - %msg%n"
+#  path: /var/log/tomcat/
+#  file: /var/log/tomcat/sell
+#  level: debug
+
